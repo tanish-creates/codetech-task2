@@ -1,0 +1,47 @@
+def calculate_letter_grade(average):
+    """Calculate the letter grade based on the average score."""
+    if average >= 90:
+        return "A", 4.0
+    elif average >= 80:
+        return "B", 3.0
+    elif average >= 70:
+        return "C", 2.0
+    elif average >= 60:
+        return "D", 1.0
+    else:
+        return "F", 0.0
+
+def manage_student_grades():
+    print("Welcome to the Student Grade Manager!")
+    print("Enter grades for different subjects or assignments. Type 'done' when finished.")
+    
+    grades = []
+    while True:
+        grade_input = input("Enter a grade (0-100): ")
+        if grade_input.lower() == "done":
+            break
+        try:
+            grade = float(grade_input)
+            if 0 <= grade <= 100:
+                grades.append(grade)
+            else:
+                print("Please enter a grade between 0 and 100.")
+        except ValueError:
+            print("Invalid input. Please enter a numeric grade or 'done' to finish.")
+    
+    if grades:
+        # Calculate average grade
+        average = sum(grades) / len(grades)
+        letter_grade, gpa = calculate_letter_grade(average)
+        
+        print("\n--- Grade Summary ---")
+        print(f"Grades Entered: {grades}")
+        print(f"Average Grade: {average:.2f}")
+        print(f"Letter Grade: {letter_grade}")
+        print(f"GPA: {gpa:.2f}")
+    else:
+        print("No grades entered.")
+
+# Run the program
+manage_student_grades()
+    
