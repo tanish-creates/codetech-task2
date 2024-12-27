@@ -31,4 +31,5 @@ Future Enhancements
 Add functionality to store and retrieve grades from a file or database.
 Include more detailed reporting, such as the highest/lowest grade.
 Implement a graphical user interface (GUI) for ease of use.
-![image](https://github.com/user-attachments/assets/b7a3ad5d-6f82-4e82-bf61-0f47b446881a)
+![image](https://github.com/user-attachments/assets/7a520d90-b333-4f6d-adce-5070354d49e4)
+
